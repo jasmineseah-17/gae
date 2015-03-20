@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheets/normalise.css">
+        <meta charset="UTC-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JusHap50</title>
+		<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+		<link href='http://fonts.googleapis.com/css?family=Economica:400,700' rel='stylesheet'>
+		<link rel="stylesheet" href="stylesheets/JusHap.css">
+        <link rel="shortcut icon" href="/images/favicon.ico"/>
+	</head>
+	<body>
+      <a href='{{url}}' name="login" class="login">{{url_linktext}}</a>
+      <a href='/'><img src="/images/JH.png" alt="logo" id="logo"></a>
+      <a href="/manage" class="login">Manage</a>
+      <div class="background">
+      </div>
+      <div class="text">
+        <header>
+            <h1>Happenings in the last 50 years of Singapore</h1>
+        </header>
+        <div id="intro">
+            <h2>WHAT IS THIS?</h2>
+            <p>In conjunction with Singapore's fiftieth birthday, this website serves as an archive for you to share your beloved memories from the last fifty years with fellow Singaporeans. Simply selct your month and year of birth to find out what exciting events happened when you were born!</p>
+        </div>
+      </div>
+      <form id="dateform" action="/story" method="post">
+        <h3 id="dateformtitle">Enter your birth month and year:</h3>
+        <select name="month" class="monthform">
+            <option value="Jan">January</option>
+            <option value="Feb">February</option>
+            <option value="Mar">March</option>
+            <option value="Apr">April</option>
+            <option value="May">May</option>
+            <option value="Jun">June</option>
+            <option value="Jul">July</option>
+            <option value="Aug">August</option>
+            <option value="Sept">September</option>
+            <option value="Oct">October</option>
+            <option value="Nov">November</option>
+            <option value="Dec">December</option>
+        </select>
+        <select name="year" class="yearform">
+            <option value="1965">1965</option>
+            <option value="1966">1966</option>
+            <option value="1967">1967</option>
+            <option value="1968">1968</option>
+            <option value="1969">1969</option>
+            <option value="1970">1970</option>
+            <option value="1971">1971</option>
+            <option value="1972">1972</option>
+            <option value="1973">1973</option>
+            <option value="1974">1974</option>
+            <option value="1975">1975</option>
+            <option value="1976">1976</option>
+            <option value="1977">1977</option>
+            <option value="1978">1978</option>
+            <option value="1979">1979</option>
+            <option value="1980">1980</option>
+            <option value="1981">1981</option>
+            <option value="1982">1982</option>
+            <option value="1983">1983</option>
+            <option value="1984">1984</option>
+            <option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+            <option value="1988">1988</option>
+            <option value="1989">1989</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+        </select>
+        <div class="submit_form">
+          <input type="submit" value="Submit" action="/story" method="post" name="nostore">
+        </div>
+      </form>
+      {% if user %}
+          <div id="bottom">
+            <form id="storyform" action="/story" method="post">
+                <div class="center-container">
+                    <h3>Share your story!</h3>
+                    <textarea maxlength="9999" name="content" rows="3" cols="60" required="required"></textarea>
+                    <select name="month" class="monthform2">
+                        <option value="Jan">January</option>
+                        <option value="Feb">February</option>
+                        <option value="Mar">March</option>
+                        <option value="Apr">April</option>
+                        <option value="May">May</option>
+                        <option value="Jun">June</option>
+                        <option value="Jul">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sept">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+                    </select>
+                    <select name="year" class="yearform">
+                        <option value="1965">1965</option>
+                        <option value="1966">1966</option>
+                        <option value="1967">1967</option>
+                        <option value="1968">1968</option>
+                        <option value="1969">1969</option>
+                        <option value="1970">1970</option>
+                        <option value="1971">1971</option>
+                        <option value="1972">1972</option>
+                        <option value="1973">1973</option>
+                        <option value="1974">1974</option>
+                        <option value="1975">1975</option>
+                        <option value="1976">1976</option>
+                        <option value="1977">1977</option>
+                        <option value="1978">1978</option>
+                        <option value="1979">1979</option>
+                        <option value="1980">1980</option>
+                        <option value="1981">1981</option>
+                        <option value="1982">1982</option>
+                        <option value="1983">1983</option>
+                        <option value="1984">1984</option>
+                        <option value="1985">1985</option>
+                        <option value="1986">1986</option>
+                        <option value="1987">1987</option>
+                        <option value="1988">1988</option>
+                        <option value="1989">1989</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                    </select>
+                    <div class="submit_story">
+                      <input type="submit" value="Submit story!" action="/story" name="store">
+                    </div>
+                </div>
+            </form>
+          </div>
+      {% else %}
+        <div id="nologin">
+            <h2>Login in to share your story!</h2>
+            <a href='{{url}}' name="login" id="login">{{url_linktext}}</a>
+        </div>
+      {% endif %}
+      <div class="clearfix"></div>
+        <footer>
+            <p id="copyright">&copy; 2015 Jasmine</p>
+        </footer>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-60990129-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+	</body>
+
+    <script language="JavaScript">
+    <!--
+    var space = "            ";
+    var speed = "5";
+    var pos = 0;
+    var msg = "JUSHAP50";
+    function Scroll()
+    {
+    document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+    pos++;
+    if (pos > msg.length) pos = 0;
+    window.setTimeout("Scroll()", speed);
+    }
+    Scroll();
+    -->
+    </script>
+</html>
+

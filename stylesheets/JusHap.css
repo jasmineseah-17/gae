@@ -1,0 +1,261 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100; /* Always behind everything */
+    background: azure url(/images/singapore.jpg) center;
+    opacity: 0.35;
+    width: 100%;
+}
+
+body {
+    padding-top: 20px;
+}
+
+.login {
+    position: relative;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #52C79E;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 13px;
+    float: right;
+}
+
+.login:hover {
+    background-color: #5AD6AB;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.text {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Economica', sans-serif;
+    padding: 20px;
+    border-bottom: 1px solid #D3D3D3;
+    text-align: justify;
+}
+
+header {
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Cookie', cursive;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+h2 {
+	font-size: 30px;
+	display: inline;
+}
+
+p {
+	font-size: 20px;
+	display: inline;
+	font-weight: bold;
+}
+
+#nologin {
+    text-align: center;
+}
+
+#login {
+    position: relative;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #52C79E;
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 90px;
+}
+
+#login:hover {
+    background-color: #5AD6AB;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dateformtitle {
+	font-size: 30px;
+	display: block;
+	margin: 0;
+}
+
+#dateform {
+    text-align: center;
+    width: 100%;
+    padding: 20px 10px 25px;
+}
+
+select {
+	display: inline;
+	font-size: 20px;
+	width: 15%;
+}
+
+#dateform input{
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #52C79E;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+#dateform input:hover {
+    background-color: #5AD6AB;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#bottom {
+    position: relative;
+    border-top: 1px solid #D3D3D3;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.submit_story input{
+    width: 80px;
+    height: 40px;
+    display: inline;
+}
+#storyform {
+    text-align: center;
+    margin: 30px auto 0;
+    width: 100%;
+}
+
+@media all {
+    h3 {
+        font-size: 34px;
+        display: block;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.center-container {
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.center-container:before, .center-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+#storyform input{
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #52C79E;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 3px;
+    width: auto;
+}
+
+#storyform input:hover {
+    background-color: #5AD6AB;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+textarea {
+	display: inline-block;
+	width: 40%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+    border-top: 1px solid #808080;
+    padding: 10px;
+}
+
+#copyright {
+    font-weight: lighter;
+    font-size: 15px;
+
+}
+
+@media all and (max-width: 430px){
+    header {
+        font-size: 30px;
+    }
+}
+
+th {
+    padding: 10px;
+    font-size: 20px;
+}
+td {
+    padding: 10px;
+    font-size: 20px;
+}
+
